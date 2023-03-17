@@ -1,0 +1,68 @@
+{
+  "groupName": "部大祭",
+  "data": {
+    "budai_choco_kashoku": {
+      "battleName": "千代古の菓蝕_第2回愛レイド",
+      "enemyList": [
+        {
+          "enemyName": "【部大祭】千代古の菓蝕",
+          "enemyStatus": [20000000, 13500, 8000, 1, 0.3, "g"],
+          "activeAbilityList": [
+            ["radImpuct", 0.7],
+            ["fullBlast", 0.7],
+            ["restBlow", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", 1],
+            ["doubleAttack", 0.8]
+          ],
+          "constAbilityList": [["frailEye", 1]]
+        }
+      ],
+      "effect": false,
+      "rin": 100000,
+      "exp": 2500
+    },
+    "budai_chocohada": {
+      "battleName": "チョコ肌の管理者_第2回愛討伐",
+      "enemyList": [
+        {
+          "enemyName": "【部大祭】チョコ肌の管理者A",
+          "enemyStatus": [16750, 3400, 3500, 700, 0.3, "g"],
+          "activeAbilityList": [
+            ["powerSwing", 0.7],
+            ["fullAttack", 0.7],
+            ["breakArmor", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "【部大祭】チョコ肌の管理者B",
+          "enemyStatus": [16750, 3400, 3500, 700, 0.3, "g"],
+          "activeAbilityList": [
+            ["powerSwing", 0.7],
+            ["fullAttack", 0.7],
+            ["breakArmor", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "【部大祭】チョコ肌の管理者C",
+          "enemyStatus": [16750, 3400, 3500, 700, 0.3, "g"],
+          "activeAbilityList": [
+            ["powerSwing", 0.7],
+            ["fullAttack", 0.7],
+            ["breakArmor", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false,
+      "rin": 5000,
+      "exp": 500
+    }
+  }
+}

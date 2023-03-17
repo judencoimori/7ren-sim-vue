@@ -1,0 +1,46 @@
+{
+  "groupName": "レイド討伐",
+  "data": {
+    "assult_hainen_ika": {
+      "battleName": "【廃燃アサルト】【異化】廃熱の戮力",
+      "enemyList": [
+        {
+          "enemyName": "【異化】廃熱の戮力",
+          "enemyStatus": [21600000, 15400, 5400, 1, 0.3, "g"],
+          "activeAbilityList": [
+            ["riggerFolt", 0.9],
+            ["punishment", 0.9],
+            ["fullSlush", 0.7],
+            ["melUmbra", 0.8],
+            ["restBlow", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": [["weakEye", 1]]
+        }
+      ],
+      "effect": "hp40%",
+      "rin": 400000,
+      "exp": 5500
+    },
+    "assult_hainen": {
+      "battleName": "【廃燃アサルト】廃燃の駆集",
+      "enemyList": [
+        {
+          "enemyName": "廃燃の駆集",
+          "enemyStatus": [10800000, 9800, 3000, 1, 0.3, "g"],
+          "activeAbilityList": [
+            ["punishment", 0.9],
+            ["fullSwing", 0.8],
+            ["powerSmash", 0.8],
+            ["breakArmor", 0.8]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": [["weakEye", 1]]
+        }
+      ],
+      "effect": "hp60%",
+      "rin": 250000,
+      "exp": 4500
+    }
+  }
+}

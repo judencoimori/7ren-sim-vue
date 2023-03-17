@@ -1,0 +1,280 @@
+{
+  "groupName": "魔獣チャレンジ",
+  "data": {
+    "202302_challenge": {
+      "battleName": "2023年2月_レトビア",
+      "enemyList": [
+        {
+          "enemyName": "原野の斑濃威",
+          "enemyStatus": [50000, 10, 65000, 5000, 0.3, "b"],
+          "activeAbilityList": [
+            ["riggerFolt", 0.9],
+            ["restBlow", 0.7],
+            ["protection", 0.8],
+            ["radImpuct", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["untext", 0.9],
+            ["aliveShip", 1],
+            ["setStance", 1],
+            ["doubleAttack", 0.8]
+          ],
+          "constAbilityList": [
+            ["frailEye", 1],
+            ["revenger", 3],
+            ["riseFence", 3]
+          ]
+        },
+        {
+          "enemyName": "赫赤の飛竜",
+          "enemyStatus": [100, 65000, 700, 16500, 0.3, "d"],
+          "activeAbilityList": [
+            ["burstOut", 0.8],
+            ["adaptlance", 0.7]
+          ],
+          "passiveAbilityList": [["brightSence", 0.9],
+          ["doubleAttack", 0.8]],
+          "constAbilityList": [
+            ["resistEye", 1],
+            ["rigBane", 1],
+            ["heatBrave", 3]
+          ]
+        },
+        {
+          "enemyName": "降下する鉤",
+          "enemyStatus": [200, 65000, 500, 17500, 0.3, "b"],
+          "activeAbilityList": [
+            ["burstOut", 0.8],
+            ["adaptlance", 0.7]
+          ],
+          "passiveAbilityList": [["brightSence", 0.9],
+          ["doubleAttack", 0.8]],
+          "constAbilityList": [
+            ["weakEye", 1],
+            ["rigBane", 1],
+            ["heatBrave", 3]
+          ]
+        }
+      ],
+      "effect": false,
+      "rin": 8000,
+      "exp": 300
+    },
+    "202301_challenge": {
+      "battleName": "2023年1月_ベネメーロ",
+      "enemyList": [
+        {
+          "enemyName": "合呑む劇毒",
+          "enemyStatus": [530000, 55000, 32000, 1100, 0.3, "m"],
+          "activeAbilityList": [
+            ["pickHate", 0.8],
+            ["shutOver", 0.8],
+            ["cutShield", 0.8],
+            ["fullBlast", 0.8],
+            ["adaptlance", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["doubleAttack", 0.8],
+            ["brightSence", 0.9],
+            ["setAct", 1]
+          ],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "黙する考究",
+          "enemyStatus": [150000, 12000, 22000, 1500, 0.3, "n"],
+          "activeAbilityList": [
+            ["melUmbra", 0.8],
+            ["restBlow", 0.7],
+            ["radImpuct", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["doubleAttack", 0.8],
+            ["standShow", 0.9],
+            ["aliveShip", 1]
+          ],
+          "constAbilityList": [
+            ["guts", 0.8],
+            ["revenger", 3]
+          ]
+        },
+        {
+          "enemyName": "弾頭の彗星",
+          "enemyStatus": [190000, 1200, 10000, 5000, 0.3, "g"],
+          "activeAbilityList": [
+            ["shutOver", 0.8],
+            ["riggerFolt", 0.9],
+            ["punishment", 0.9],
+            ["melUmbra", 0.8]
+          ],
+          "passiveAbilityList": [["setStance", 1]],
+          "constAbilityList": [["fastAccele", 3]]
+        }
+      ],
+      "effect": false,
+      "rin": 8000,
+      "exp": 300
+    },
+    "202212_challenge": {
+      "battleName": "2022年12月_トロワナイン",
+      "enemyList": [
+        {
+          "enemyName": "神速の翼機体",
+          "enemyStatus": [400000, 65000, 22000, 1300, 0.3, "g"],
+          "activeAbilityList": [
+            ["mailToughness", 0.8],
+            ["bravBoost", 0.8],
+            ["fullBlast", 0.8],
+            ["fullSwing", 0.8],
+            ["powerSmash", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["doubleAttack", 0.8],
+            ["brightSence", 0.9],
+            ["setStance", 1]
+          ],
+          "constAbilityList": [["riseFence",3],["guts",1]]
+        },
+        {
+          "enemyName": "蒼雷の一閃",
+          "enemyStatus": [300000, 6000, 20000, 1500, 0.3, "m"],
+          "activeAbilityList": [
+            ["shutOver", 0.8],
+            ["bravBoost", 0.8],
+            ["mailToughness", 0.8],
+            ["fullBlast", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["doubleAttack", 0.8],
+            ["brightSence", 0.9]
+          ],
+          "constAbilityList": [
+            ["riseFence", 3],
+            ["rigBane", 1]
+          ]
+        },
+        {
+          "enemyName": "春眠の備蓄",
+          "enemyStatus": [200000, 50000, 16000, 3000, 0.3, "b"],
+          "activeAbilityList": [
+            ["mailToughness", 0.8],
+            ["bravBoost", 0.8],
+            ["fullBlast", 0.8],
+            ["fullSwing", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["doubleAttack", 0.8],
+            ["brightSence", 0.9]
+          ],
+          "constAbilityList": [["guts", 1]]
+        }
+      ],
+      "effect": false,
+      "rin": 8000,
+      "exp": 300
+    },
+    "202211_challenge": {
+      "battleName": "2022年11月_オルンオルシュ",
+      "enemyList": [
+        {
+          "enemyName": "煌双竜",
+          "enemyStatus": [400000, 20000, 25000, 100, 0.3, "d"],
+          "activeAbilityList": [
+            ["fullSlush", 0.7],
+            ["fullBlast", 0.8],
+            ["fullSwing", 0.8],
+            ["soulDrain", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["meteorBlaze", 0.5],
+            ["brightSence", 0.9],
+            ["setAct", 1],
+            ["setStance", 1]
+          ],
+          "constAbilityList": [["heatBrave",3],["riseFence",3],["revenger",3]]
+        },
+        {
+          "enemyName": "夜直の舞擦",
+          "enemyStatus": [120000, 22000, 3000, 1900, 0.3, "d"],
+          "activeAbilityList": [
+            ["fullSlush", 0.7],
+            ["fullSwing", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["aliveShip", 1],
+            ["brightSence", 0.9]
+          ],
+          "constAbilityList": [
+            ["heatBrave", 3],
+            ["guts", 1],
+            ["rigBane", 1]
+          ]
+        },
+        {
+          "enemyName": "火勢の赤竜",
+          "enemyStatus": [36000, 65000, 5000, 800, 0.3, "b"],
+          "activeAbilityList": [
+            ["fullSlush", 0.7],
+            ["fullBlast", 0.8],
+            ["powerSmash", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["aliveShip", 1],
+            ["brightSence", 0.9]
+          ],
+          "constAbilityList": [
+            ["heatBrave", 3],
+            ["rigBane", 1]
+          ]
+        }
+      ],
+      "effect": false,
+      "rin": 8000,
+      "exp": 300
+    },
+    "202210_challenge": {
+      "battleName": "2022年10月_ウェアリカンド",
+      "enemyList": [
+        {
+          "enemyName": "剛穀の戦鉞",
+          "enemyStatus": [500000, 65000, 40000, 50000, 0.3, "b"],
+          "activeAbilityList": [
+            ["pickHate", 0.8],
+            ["powerSmash", 0.8],
+            ["adaptlance", 0.7],
+            ["fullSwing", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", 0.9]
+          ],
+          "constAbilityList": [["weakEye",1],["frailEye",1],["riseFence",3],["revenger",3]]
+        },
+        {
+          "enemyName": "浮遊する精霊",
+          "enemyStatus": [15000, 2200, 2000, 5100, 0.3, "m"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [],
+          "constAbilityList": [
+            ["frailEye", 1],
+            ["rigBane", 1],
+            ["through",1]
+          ]
+        },
+        {
+          "enemyName": "道を遮る岩",
+          "enemyStatus": [15000, 2200, 2000, 5000, 0.3, "m"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [],
+          "constAbilityList": [
+            ["frailEye", 1],
+            ["rigBane", 1],
+            ["through",1]
+          ]
+        }
+      ],
+      "effect": "hp49%",
+      "rin": 8000,
+      "exp": 300
+    }
+  }
+}
