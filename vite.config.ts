@@ -9,6 +9,9 @@ export default defineConfig({
   server: {
     host: true,
   },
+  build: {
+    outDir: "docs"
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue';
+import { ref, computed, watch } from 'vue';
 import AbilityInputForm from './AbilityInputForm.vue'
 import { useAnimaStore } from '@/stores/animaStore';
 import { storeToRefs } from 'pinia';
@@ -13,6 +13,8 @@ const animaStore = useAnimaStore();
 const { partnerAnimas } = storeToRefs(animaStore);
 const { addAbility } = animaStore;
 
+const key = ref(0);
+
 const abilitys = computed(
     () => partnerAnimas.value[props.animaNum].abilitys
 );
@@ -21,9 +23,9 @@ const abilitys = computed(
 
 <template>
     <div>
-        <button @click="addAbility(props.animaNum)">Add ability</button>
+        <button @click="addAbility(props.animaNum), key++">Add ability</button>
         <TransitionGroup tag="div">
-            <AbilityInputForm v-for="(ability, index) in abilitys" :key="ability.id" 
+            <AbilityInputForm v-for="(ability, index) in abilitys" :key="key" 
                 :abilityNum="index" :animaNum="props.animaNum">
             </AbilityInputForm>
         </TransitionGroup>
@@ -41,8 +43,5 @@ const abilitys = computed(
 .v-leave-to {
     opacity: 0;
     transform: translateX(30px);
-}
-.v-leave-active {
-  position: absolute;
 }
 </style>

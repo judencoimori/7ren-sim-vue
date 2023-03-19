@@ -14,7 +14,7 @@ type Anima = {
 }
 
 export function getAnimaData() {
-    const ANIMA_DATA_URL: string = "../public/data/animaData.csv";
+    const ANIMA_DATA_URL: string = "../data/animaData.csv";
     let animaData: Ref<Anima[]> = ref([]);
 
     fetch(ANIMA_DATA_URL)

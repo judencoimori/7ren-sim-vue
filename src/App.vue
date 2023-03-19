@@ -21,15 +21,19 @@ function changeSideView() {
       7ren-simulator-vue
     </header>
     <div class="main">
-      <SideView v-if="openSideView"></SideView>
-      <RouterView class="routerview" />
-      <button id="sidebarOpenButton" @click="changeSideView">OpCl</button>
+      <TransitionGroup name="main">
+        <SideView v-if="openSideView" ></SideView>
+        <RouterView class="routerview" />
+      </TransitionGroup>
     </div>
   </div>
   <nav>
-    <RouterLink to="/" class="navLink">InputPartner</RouterLink>
-    <RouterLink to="/select" class="navLink">SelectBattle</RouterLink>
-    <RouterLink to="/" class="navLink">Result</RouterLink>
+    <button id="sidebarOpenButton" @click="changeSideView">OpCl</button>
+    <div class="routerLink">
+      <RouterLink to="/" class="navLink">InputPartner</RouterLink>
+      <RouterLink to="/select" class="navLink">SelectBattle</RouterLink>
+      <RouterLink to="/" class="navLink">Result</RouterLink>
+    </div>
   </nav>
   <datalist id="abilityOptions">
     <option v-for="ability in abilityData" :key="ability.name" :value="ability.name"></option>
@@ -61,6 +65,7 @@ header {
   padding-bottom: 150px;
   flex: 1 1 auto;
   min-width: 300px;
+  overflow-x: hidden;
 }
 
 nav {
@@ -72,9 +77,15 @@ nav {
   font-size: larger;
   font-weight: bold;
   display: flex;
-  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.8);
+}
+
+.routerLink {
+  display:flex;
+  justify-content: center;
+  flex-grow:1;
 }
 
 @media screen and (max-width: 700px) {
@@ -90,14 +101,29 @@ nav {
 }
 
 #sidebarOpenButton {
-  position: fixed;
-  display: block;
-  bottom: 6px;
   margin-left: 6px;
   height: 40px;
   background-color: darkred;
   color: white;
   z-index: 10;
   font-size: x-small;
+  flex-grow:0;
 }
+
+.main-move,
+.main-enter-active,
+.main-leave-active {
+  transition: all 1s ease;
+}
+
+.main-enter-from,
+.main-leave-to {
+  opacity: 0;
+  transform: translateX(-500px);
+}
+
+.main-leave-active {
+  position:absolute;
+}
+
 </style>

@@ -77,6 +77,7 @@ input[type=radio] {
 
 #selectElement label,
 #selectRank label {
+    font-weight:bold;
     background-color: darkred;
     width: 50px;
     height: 100%;
@@ -85,6 +86,17 @@ input[type=radio] {
     text-align: center;
     padding: 0 6px;
     border-radius: 2px;
+}
+
+#selectElement label:hover,
+#selectRank label:hover {
+    background-color: pink;
+}
+
+#selectElement input:checked + label,
+#selectRank input:checked + label {
+    background-color: pink;
+    color:darkred;
 }
 
 #selectAnima {

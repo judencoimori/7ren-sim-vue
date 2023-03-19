@@ -1,0 +1,181 @@
+{
+  "groupName": "業シリーズ",
+  "data": {
+    "iho100": {
+      "battleName": "異邦の業 100%",
+      "enemyList": [
+        {
+          "enemyName": "異邦の業",
+          "enemyStatus": [1800000, 40000, 25000, 2500, 0.3, "m"],
+          "activeAbilityList": [
+            ["adaptlance", 0.7],
+            ["fullSlush", 0.7],
+            ["powerSmash", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", 0.9],
+            ["untext", 0.9],
+            ["doubleAttack", 0.8]
+          ],
+          "constAbilityList": [["riseFence", 3]]
+        },
+        {
+          "enemyName": "固塊の拝",
+          "enemyStatus": [1350000, 35000, 23000, 2600, 0.3, "m"],
+          "activeAbilityList": [
+            ["restBlow", 0.7],
+            ["radImpuct", 0.7],
+            ["combination", 0.8]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "溶塊の拝",
+          "enemyStatus": [900000, 25000, 21000, 3000, 0.3, "m"],
+          "activeAbilityList": [
+            ["shutOver", 0.8],
+            ["bravBoost", 0.8],
+            ["mailToughness", 0.8],
+            ["combination", 0.8]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    "ikyo40": {
+      "battleName": "異教の業 40%",
+      "enemyList": [
+        {
+          "enemyName": "異教の業",
+          "enemyStatus": [640000, 16000, 8200, 1040, 0.3, "b"],
+          "activeAbilityList": [
+            ["soulDrain", 0.7],
+            ["fullBlast", 0.8],
+            ["radImpuct", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", 0.9],
+            ["untext", 0.9]
+          ],
+          "constAbilityList": [["riseFence", 3]]
+        },
+        {
+          "enemyName": "心魂の徒1",
+          "enemyStatus": [400000, 11200, 7600, 1080, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", 0.8],
+            ["bravBoost", 0.8],
+            ["restBlow", 0.7],
+            ["adaptlance", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", 0.9]],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "心魂の徒2",
+          "enemyStatus": [400000, 11200, 7600, 1080, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", 0.8],
+            ["bravBoost", 0.8],
+            ["restBlow", 0.7],
+            ["adaptlance", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", 0.9]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    "ikyo100": {
+      "battleName": "異教の業 100%",
+      "enemyList": [
+        {
+          "enemyName": "異教の業",
+          "enemyStatus": [1900000, 40000, 20500, 2600, 0.3, "b"],
+          "activeAbilityList": [
+            ["soulDrain", 0.7],
+            ["fullBlast", 0.8],
+            ["radImpuct", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", 0.9],
+            ["untext", 0.9],
+            ["doubleAttack", 0.8]
+          ],
+          "constAbilityList": [["riseFence", 3]]
+        },
+        {
+          "enemyName": "心魂の徒1",
+          "enemyStatus": [1000000, 28000, 19000, 2700, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", 0.8],
+            ["bravBoost", 0.8],
+            ["restBlow", 0.7],
+            ["adaptlance", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", 3]],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "心魂の徒2",
+          "enemyStatus": [1000000, 28000, 19000, 2700, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", 0.8],
+            ["bravBoost", 0.8],
+            ["restBlow", 0.7],
+            ["adaptlance", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", 3]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    "ibun100": {
+      "battleName": "異聞の業 100%",
+      "enemyList": [
+        {
+          "enemyName": "異聞の業",
+          "enemyStatus": [2000000, 40000, 22000, 2700, 0.3, "g"],
+          "activeAbilityList": [
+            ["exeStun", 0.6],
+            ["fullSwing", 0.8],
+            ["restBlow", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["setAct", 1],
+            ["brightSence", 0.9],
+            ["untext", 0.9],
+            ["doubleAttack", 0.8]
+          ],
+          "constAbilityList": [["riseFence", 3],["frailEye", 1]]
+        },
+        {
+          "enemyName": "合魄の卒1",
+          "enemyStatus": [1100000, 32000, 24000, 3700, 0.3, "g"],
+          "activeAbilityList": [
+            ["punishment", 0.9],
+            ["gridWall", 0.8],
+            ["gravitySlow", 0.8]
+          ],
+          "passiveAbilityList": [["doubleAttack", 0.8],["standShow", 0.9]],
+          "constAbilityList": [["rigBane", 1]]
+        },
+        {
+          "enemyName": "合魄の卒2",
+          "enemyStatus": [1000000, 30000, 18000, 2500, 0.3, "g"],
+          "activeAbilityList": [
+            ["willBind", 0.95],
+            ["restBlow", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    }
+  }
+}
