@@ -52,7 +52,7 @@ watch(level, () => {
                 {{ index + 1 }}
             </option>
         </select>
-        <button @click="removeAbility(props.animaNum, props.abilityNum)">x</button>
+        <button @click="removeAbility(props.animaNum, props.abilityNum)" class="removeButton">x</button>
     </div>
 </template>
 
@@ -66,19 +66,15 @@ watch(level, () => {
 .abilityInputFormContainer {
     display: flex;
     align-items: center;
-    container-type: inline-size;
 }
 
-@container (min-width:300px) {
-    label {
-        display:flex;
-        align-items:center;
-    }
+label {
+    display: flex;
+    align-items: center;
 }
 
 label,
 button {
-    height: 2em;
     margin: 0 2px 0 0;
 }
 
@@ -89,5 +85,19 @@ input {
 select {
     flex: 0 0 3em;
     width: 2.5em;
+}
+
+.removeButton {
+    margin:0px;
+    padding:0px;
+    width:30px;
+    background-color:transparent;
+    border:none;
+}
+.removeButton:hover {
+    cursor: pointer;
+    color:darkgray;
+    background-color: lightgray;
+    font-weight: bold;
 }
 </style>

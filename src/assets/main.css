@@ -15,6 +15,5 @@ select,
 button,
 label {
   box-sizing: border-box;
-  height: 2.5em;
   font-size:medium;
 }

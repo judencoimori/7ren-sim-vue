@@ -10,61 +10,99 @@ const props = defineProps<Props>();
 
 const animaStore = useAnimaStore();
 const { animaData, partnerAnimas } = storeToRefs(animaStore);
+const element = computed(() => partnerAnimas.value[props.animaNum].element);
+const rank = computed(() => partnerAnimas.value[props.animaNum].rank);
+const id = computed(() => partnerAnimas.value[props.animaNum].id);
 
-const element = ref("b");
-const rank = ref("CD");
+const narrowAnimaData = ref(animaData.value.filter(anima => {
+    return anima.rank == "CD" && anima.element == "b";
+}))
 
-const narrowAnimaData = computed(
-    () => {
-        return animaData.value.filter(anima => {
-            return anima.rank == rank.value && anima.element == element.value;
-        })
-    }
-)
-const selectedAnimaId = ref(-1);
+const selectedAnimaId = computed(() => partnerAnimas.value[props.animaNum].id);
+const dataLoad = ref(animaData.value.length > 0); //うーん
+
+watch([id, element, rank, dataLoad], ([newId], [oldId]) => {
+    narrowAnimaData.value = animaData.value.filter(anima => {
+        return anima.rank === rank.value && anima.element === element.value;
+    })
+    if (narrowAnimaData.value.length !== 0 && newId === oldId) partnerAnimas.value[props.animaNum].id = narrowAnimaData.value[0].id;
+}, { immediate: true })
+
+
+const key = ref(partnerAnimas.value[props.animaNum].key);
+
+watch(key, () => {
+    console.log(key);
+})
 
 watch(animaData.value, () => {
-    selectedAnimaId.value = 0;
+    dataLoad.value = true;
+    calcStatus(selectedAnimaId.value);
 })
 
 watch(selectedAnimaId, id => {
-    const anima = animaData.value[id];
-    partnerAnimas.value[props.animaNum].hp = anima.hp;
-    partnerAnimas.value[props.animaNum].id = anima.id;
-    partnerAnimas.value[props.animaNum].atk = anima.atk;
-    partnerAnimas.value[props.animaNum].def = anima.def;
-    partnerAnimas.value[props.animaNum].spd = anima.spd;
-    partnerAnimas.value[props.animaNum].luk = anima.luk;
-    partnerAnimas.value[props.animaNum].name = anima.name;
-    partnerAnimas.value[props.animaNum].rank = anima.rank;
-    partnerAnimas.value[props.animaNum].element = anima.element;
-})
+    calcStatus(id);
+}, { immediate: true })
+
+function calcStatus(id: number) {
+    if (dataLoad.value) {
+        const anima = animaData.value[id];
+        partnerAnimas.value[props.animaNum].hp = anima.hp;
+        partnerAnimas.value[props.animaNum].id = anima.id;
+        partnerAnimas.value[props.animaNum].atk = anima.atk;
+        partnerAnimas.value[props.animaNum].def = anima.def;
+        partnerAnimas.value[props.animaNum].spd = anima.spd;
+        partnerAnimas.value[props.animaNum].luk = anima.luk;
+        partnerAnimas.value[props.animaNum].name = anima.name;
+        partnerAnimas.value[props.animaNum].rank = anima.rank;
+        partnerAnimas.value[props.animaNum].element = anima.element;
+    }
+}
 
 </script>
 
 <template>
+    <div class="title">アニマ選択エリア</div>
     <div id="selectElement">
-        <input type="radio" name="element" id="beast" v-model="element" value="b"><label for="beast">獣</label>
-        <input type="radio" name="element" id="magic" v-model="element" value="m"><label for="magic">魔</label>
-        <input type="radio" name="element" id="golem" v-model="element" value="g"><label for="golem">ゴ</label>
-        <input type="radio" name="element" id="dragon" v-model="element" value="d"><label for="dragon">竜</label>
-        <input type="radio" name="element" id="nothing" v-model="element" value="n"><label for="nothing">無</label>
+        <input type="radio" :name="'elements' + props.animaNum" :id="'beast' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].element" value="b"><label :for="'beast' + props.animaNum">獣</label>
+        <input type="radio" :name="'elements' + props.animaNum" :id="'magic' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].element" value="m"><label :for="'magic' + props.animaNum">魔</label>
+        <input type="radio" :name="'elements' + props.animaNum" :id="'golem' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].element" value="g"><label :for="'golem' + props.animaNum">ゴ</label>
+        <input type="radio" :name="'elements' + props.animaNum" :id="'dragon' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].element" value="d"><label :for="'dragon' + props.animaNum">竜</label>
+        <input type="radio" :name="'elements' + props.animaNum" :id="'nothing' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].element" value="n"><label :for="'nothing' + props.animaNum">無</label>
     </div>
     <div id="selectRank">
-        <input type="radio" name="rank" id="SS" v-model="rank" value="SS"><label for="SS">SS</label>
-        <input type="radio" name="rank" id="S" v-model="rank" value="S"><label for="S">S</label>
-        <input type="radio" name="rank" id="A" v-model="rank" value="A"><label for="A">A</label>
-        <input type="radio" name="rank" id="B" v-model="rank" value="B"><label for="B">B</label>
-        <input type="radio" name="rank" id="CD" v-model="rank" value="CD"><label for="CD">CD</label>
+        <input type="radio" :name="'rank' + props.animaNum" :id="'SS' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].rank" value="SS"><label :for="'SS' + props.animaNum">SS</label>
+        <input type="radio" :name="'rank' + props.animaNum" :id="'S' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].rank" value="S"><label :for="'S' + props.animaNum">S</label>
+        <input type="radio" :name="'rank' + props.animaNum" :id="'A' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].rank" value="A"><label :for="'A' + props.animaNum">A</label>
+        <input type="radio" :name="'rank' + props.animaNum" :id="'B' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].rank" value="B"><label :for="'B' + props.animaNum">B</label>
+        <input type="radio" :name="'rank' + props.animaNum" :id="'CD' + props.animaNum"
+            v-model="partnerAnimas[props.animaNum].rank" value="CD"><label :for="'CD' + props.animaNum">CD</label>
     </div>
     <div id="selectAnima">
-        <select v-model="selectedAnimaId" style="width:100%">
+        <select v-model="partnerAnimas[props.animaNum].id" style="width:100%">
             <option v-for="anima in narrowAnimaData" :value="anima.id">{{ anima.name }}</option>
         </select>
     </div>
 </template>
 
 <style scoped>
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 0 0;
+    font-weight: bold;
+}
+
 input[type=radio] {
     display: none;
 }
@@ -77,9 +115,9 @@ input[type=radio] {
 
 #selectElement label,
 #selectRank label {
-    font-weight:bold;
+    font-weight: bold;
     background-color: darkred;
-    width: 50px;
+    width: 55px;
     height: 100%;
     margin: 1px;
     color: white;
@@ -93,12 +131,13 @@ input[type=radio] {
     background-color: pink;
 }
 
-#selectElement input:checked + label,
-#selectRank input:checked + label {
+#selectElement input:checked+label,
+#selectRank input:checked+label {
     background-color: pink;
-    color:darkred;
+    color: darkred;
 }
 
 #selectAnima {
     margin-top: 6px;
-}</style>
+}
+</style>

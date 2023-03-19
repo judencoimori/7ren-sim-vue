@@ -4,22 +4,32 @@ import { getAnimaData } from "../composables/getAnimaData.js";
 import { getAbilityData } from "../composables/getAbilityData.js"
 
 class AnimaProps {
+    key: number; //input時に使用する一意のkey
     id: number;
     name: string = "";
-    rank: string = "";
-    element: string = "";
+    rank: string = "CD";
+    element: string = "b";
     hp: number = 0;
     atk: number = 0;
     def: number = 0;
     spd: number = 0;
     luk: number = 0;
+    hp_arg: Arg = { point: 0, accesory: 0, percent: 0 };
+    atk_arg: Arg = { point: 0, accesory: 0, percent: 0 };
+    def_arg: Arg = { point: 0, accesory: 0, percent: 0 };
+    spd_arg: Arg = { point: 0, accesory: 0, percent: 0 };
+    luk_arg: Arg = { point: 0, accesory: 0, percent: 0 };
+    lv: number = 150;
+    limitBreak: number = 5;
     abilitys: Ability[] = [{
+        key: 0,
         id: -1,
         function: "",
         name: "",
         type: "",
         level: -1,
-        option: [0]
+        option: [0],
+        vaild:true
     }];
     active: Ability[] = [];
     passive: Ability[] = [];
@@ -31,18 +41,27 @@ class AnimaProps {
         spd: 0,
         luk: 0
     };
-    constructor(animaNum: number) {
-        this.id = animaNum;
+    constructor(animaNum: number, key: number) {
+        this.id = 0;
+        this.key = key;
     }
 }
 
+type Arg = {
+    point: number,
+    accesory: number,
+    percent: number
+}
+
 type Ability = {
+    key: number; //inputFormのTransitionで使用するkey
     id: number;
     function: string;
     name: string;
     type: string;
     level: number;
     option: number[];
+    vaild:boolean;
 }
 type Status = {
     hp: number;
@@ -58,24 +77,26 @@ export const useAnimaStore = defineStore('animaStore', () => {
     const abilityData = getAbilityData();
 
     //初期値にid:0、abilitys:[{}]の空アニマを設定
-    const partnerAnimas = ref([new AnimaProps(0)]);
-    const enemyAnimas = ref([new AnimaProps(0)]);
+    const partnerAnimas = ref([new AnimaProps(0, 0)]);
+    const enemyAnimas = ref([new AnimaProps(0, 0)]);
 
     //partnerAnimasに空アニマをpush
-    function addPartner() {
+    function addPartner(key: number) {
         const animaNum = partnerAnimas.value.length;
-        partnerAnimas.value.push(new AnimaProps(animaNum));
+        partnerAnimas.value.push(new AnimaProps(animaNum, key));
     }
 
     //animaNum番目のpartnerAnimasに空アビリティをpush
-    function addAbility(animaNum: number) {
+    function addAbility(animaNum: number, key: number) {
         const newAbility = {
+            key: key,
             id: -1,
             function: "",
             name: "",
             type: "",
             level: -1,
-            option: [0]
+            option: [0],
+            vaild: true
         };
         partnerAnimas.value[animaNum].abilitys.push(newAbility);
     }
@@ -124,5 +145,10 @@ export const useAnimaStore = defineStore('animaStore', () => {
         abi.option = [0];
     }
 
-    return { partnerAnimas, enemyAnimas, animaData, abilityData, addPartner, addAbility, removeAbility, checkAbility, asortAbility }
+    function removePartner(animaNum: number) {
+        if(partnerAnimas.value.length === 1) return;
+        partnerAnimas.value.splice(animaNum - 1, 1);
+    }
+
+    return { partnerAnimas, enemyAnimas, animaData, abilityData, addPartner, removePartner, addAbility, removeAbility, checkAbility, asortAbility }
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue';
+import { computed } from 'vue';
 import AbilityInputForm from './AbilityInputForm.vue'
 import { useAnimaStore } from '@/stores/animaStore';
 import { storeToRefs } from 'pinia';
@@ -13,7 +13,7 @@ const animaStore = useAnimaStore();
 const { partnerAnimas } = storeToRefs(animaStore);
 const { addAbility } = animaStore;
 
-const key = ref(0);
+let key = 0;
 
 const abilitys = computed(
     () => partnerAnimas.value[props.animaNum].abilitys
@@ -23,16 +23,37 @@ const abilitys = computed(
 
 <template>
     <div>
-        <button @click="addAbility(props.animaNum), key++">Add ability</button>
+        <div class="title">アビリティ入力エリア
+            <button @click="addAbility(props.animaNum, key + 1), key++">Add ability</button>
+        </div>
         <TransitionGroup tag="div">
-            <AbilityInputForm v-for="(ability, index) in abilitys" :key="key" 
-                :abilityNum="index" :animaNum="props.animaNum">
+            <AbilityInputForm v-for="(ability, index) in abilitys" :key="ability.key" :abilityNum="index"
+                :animaNum="props.animaNum">
             </AbilityInputForm>
         </TransitionGroup>
     </div>
 </template>
 
 <style>
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 0 0;
+    font-weight: bold;
+}
+
+.title button {
+    background-color: transparent;
+    border: none;
+}
+
+.title button:hover {
+    color: gray;
+    background-color: pink;
+    cursor: pointer;
+}
+
 .v-move,
 .v-enter-active,
 .v-leave-active {
@@ -43,5 +64,9 @@ const abilitys = computed(
 .v-leave-to {
     opacity: 0;
     transform: translateX(30px);
+}
+
+.v-leave-active {
+    position: absolute;
 }
 </style>
