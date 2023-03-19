@@ -10,7 +10,7 @@ type Ability = {
 }
 
 export function getAbilityData() {
-  const ABILITY_DATA_URL: string = "../data/abilityData.csv";
+  const ABILITY_DATA_URL: string = "./data/abilityData.csv";
 
   const abilityData:Ref<Ability[]> = ref([]);
 
