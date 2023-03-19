@@ -10,7 +10,8 @@ export default defineConfig({
     host: true,
   },
   build: {
-    outDir: "docs"
+    outDir: "docs",
+    assetsDir: "./"
   },
   resolve: {
     alias: {
