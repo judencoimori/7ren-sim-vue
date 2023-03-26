@@ -47,10 +47,14 @@ function changeSideView() {
     </header>
     <div class="main">
       <SideView class="sideview" :class="{ showSideView: showSideView }"></SideView>
-      <RouterView class="routerview" :class="{ hasSideView: hasSideView }" />
+      <Suspense>
+        <template #default>
+          <RouterView class="routerview" :class="{ hasSideView: hasSideView }" />
+        </template>
+      </Suspense>
     </div>
   </div>
-  <div class="filter" :class="{ grayOut: grayOut }"></div>
+  <div class="filter" :class="{ grayOut: grayOut }"  @click="changeSideView"></div>
   <nav>
     <button id="sidebarOpenButton" @click="changeSideView" v-if="!hasSideView">OpCl</button>
     <div class="routerLink">
@@ -80,6 +84,12 @@ header {
   background-color: darkred;
 }
 
+@media screen and (max-width: 700px) {
+  header {
+    position:static;
+  }
+}
+
 .main {
   flex-grow: 1;
   display: flex;
@@ -106,11 +116,17 @@ header {
   width: 300px;
   padding-bottom: 200px;
   color: white;
-  overflow-y: auto;
+  overflow-y: scroll;
   flex-shrink: 0;
   opacity: 0;
   z-index: -1;
   transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 700px) {
+  .sideview {
+    top:0;
+  }
 }
 
 .showSideView {

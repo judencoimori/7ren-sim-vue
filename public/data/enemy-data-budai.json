@@ -1,0 +1,70 @@
+{
+  "groupName": "部大祭",
+  "data": [
+    {
+      "key": "budai_choco_kashoku",
+      "battleName": "千代古の菓蝕_第2回愛レイド",
+      "enemyList": [
+        {
+          "enemyName": "【部大祭】千代古の菓蝕",
+          "enemyStatus": [20000000, 13500, 8000, 1, 0.3, "g"],
+          "activeAbilityList": [
+            ["radImpuct", "ラッドインパクト", 0.7],
+            ["fullBlast", "フルブラスト", 0.7],
+            ["restBlow", "レストブロー", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 1],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [["frailEye", "フェレイルアイ", 1]]
+        }
+      ],
+      "effect": false,
+      "rin": 100000,
+      "exp": 2500
+    },
+    {
+      "key": "budai_chocohada",
+      "battleName": "チョコ肌の管理者_第2回愛討伐",
+      "enemyList": [
+        {
+          "enemyName": "【部大祭】チョコ肌の管理者A",
+          "enemyStatus": [16750, 3400, 3500, 700, 0.3, "g"],
+          "activeAbilityList": [
+            ["powerSwing", "パワースイング", 0.7],
+            ["fullAttack", "フルアタック", 0.7],
+            ["breakArmor", "ブレイクアーマー", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "【部大祭】チョコ肌の管理者B",
+          "enemyStatus": [16750, 3400, 3500, 700, 0.3, "g"],
+          "activeAbilityList": [
+            ["powerSwing", "パワースイング", 0.7],
+            ["fullAttack", "フルアタック", 0.7],
+            ["breakArmor", "ブレイクアーマー", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "【部大祭】チョコ肌の管理者C",
+          "enemyStatus": [16750, 3400, 3500, 700, 0.3, "g"],
+          "activeAbilityList": [
+            ["powerSwing", "パワースイング", 0.7],
+            ["fullAttack", "フルアタック", 0.7],
+            ["breakArmor", "ブレイクアーマー", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false,
+      "rin": 5000,
+      "exp": 500
+    }
+  ]
+}

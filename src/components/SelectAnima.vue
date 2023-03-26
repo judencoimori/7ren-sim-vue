@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, inject } from "vue";
 import { useAnimaStore } from "@/stores/animaStore";
 import { storeToRefs } from "pinia";
 
@@ -21,19 +21,13 @@ const narrowAnimaData = ref(animaData.value.filter(anima => {
 const selectedAnimaId = computed(() => partnerAnimas.value[props.animaNum].id);
 const dataLoad = ref(animaData.value.length > 0); //うーん
 
+
 watch([id, element, rank, dataLoad], ([newId], [oldId]) => {
     narrowAnimaData.value = animaData.value.filter(anima => {
         return anima.rank === rank.value && anima.element === element.value;
     })
     if (narrowAnimaData.value.length !== 0 && newId === oldId) partnerAnimas.value[props.animaNum].id = narrowAnimaData.value[0].id;
 }, { immediate: true })
-
-
-const key = ref(partnerAnimas.value[props.animaNum].key);
-
-watch(key, () => {
-    console.log(key);
-})
 
 watch(animaData.value, () => {
     dataLoad.value = true;
@@ -54,6 +48,7 @@ function calcStatus(id: number) {
         partnerAnimas.value[props.animaNum].spd = anima.spd;
         partnerAnimas.value[props.animaNum].luk = anima.luk;
         partnerAnimas.value[props.animaNum].name = anima.name;
+        partnerAnimas.value[props.animaNum].key = anima.name + Date.now().toString();
         partnerAnimas.value[props.animaNum].rank = anima.rank;
         partnerAnimas.value[props.animaNum].element = anima.element;
     }
@@ -62,6 +57,9 @@ function calcStatus(id: number) {
 </script>
 
 <template>
+    <div class="animaKey">
+        <input type="text" v-model="partnerAnimas[props.animaNum].key">
+    </div>
     <div class="title">アニマ選択エリア</div>
     <div id="selectElement">
         <input type="radio" :name="'elements' + props.animaNum" :id="'beast' + props.animaNum"
@@ -95,6 +93,22 @@ function calcStatus(id: number) {
 </template>
 
 <style scoped>
+.animaKey input {
+    background-color: transparent;
+    border: none;
+    width:100%;
+}
+
+.animaKey input:focus {
+    outline: none;
+    border: none;
+    background-color: lightpink;
+}
+
+.animaKey select {
+    width:100%;
+}
+
 .title {
     display: flex;
     justify-content: space-between;

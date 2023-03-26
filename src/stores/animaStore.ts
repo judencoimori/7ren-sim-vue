@@ -4,8 +4,8 @@ import { getAnimaData } from "../composables/getAnimaData.js";
 import { getAbilityData } from "../composables/getAbilityData.js"
 
 class AnimaProps {
-    key: number; //input時に使用する一意のkey
-    id: number;
+    key: string; //IndexedDBで使用する一意のkey
+    id: number = 0;
     name: string = "";
     rank: string = "CD";
     element: string = "b";
@@ -22,14 +22,14 @@ class AnimaProps {
     lv: number = 150;
     limitBreak: number = 5;
     abilitys: Ability[] = [{
-        key: 0,
+        key: 0, //inputFormのTransitionで使用するkey
         id: -1,
         function: "",
         name: "",
         type: "",
         level: -1,
         option: [0],
-        vaild:true
+        vaild: true
     }];
     active: Ability[] = [];
     passive: Ability[] = [];
@@ -41,8 +41,7 @@ class AnimaProps {
         spd: 0,
         luk: 0
     };
-    constructor(animaNum: number, key: number) {
-        this.id = 0;
+    constructor(key: string) {
         this.key = key;
     }
 }
@@ -61,7 +60,7 @@ type Ability = {
     type: string;
     level: number;
     option: number[];
-    vaild:boolean;
+    vaild: boolean;
 }
 type Status = {
     hp: number;
@@ -76,20 +75,22 @@ export const useAnimaStore = defineStore('animaStore', () => {
     const animaData = getAnimaData();
     const abilityData = getAbilityData();
 
-    //初期値にid:0、abilitys:[{}]の空アニマを設定
-    const partnerAnimas = ref([new AnimaProps(0, 0)]);
-    const enemyAnimas = ref([new AnimaProps(0, 0)]);
+    //初期値に空アニマを設定
+    const partnerKey = "ニラマル" + Date.now().toString();
+    const partnerAnimas = ref([new AnimaProps(partnerKey)]);
+    const enemyKey = "ニラマル" + Date.now().toString();
+    const enemyAnimas = ref([new AnimaProps(enemyKey)]);
 
     //partnerAnimasに空アニマをpush
-    function addPartner(key: number) {
-        const animaNum = partnerAnimas.value.length;
-        partnerAnimas.value.push(new AnimaProps(animaNum, key));
+    function addPartner() {
+        const key = "ニラマル" + Date.now().toString();
+        partnerAnimas.value.push(new AnimaProps(key));
     }
 
     //animaNum番目のpartnerAnimasに空アビリティをpush
-    function addAbility(animaNum: number, key: number) {
+    function addAbility(animaNum: number, abilityKey: number) {
         const newAbility = {
-            key: key,
+            key: abilityKey,
             id: -1,
             function: "",
             name: "",
@@ -138,6 +139,7 @@ export const useAnimaStore = defineStore('animaStore', () => {
     }
     function resetAbility(animaNum: number, abilityNum: number) {
         const abi = partnerAnimas.value[animaNum].abilitys[abilityNum];
+        //abi.keyはそのまま
         abi.id = -1;
         abi.function = "";
         abi.type = "";
@@ -146,7 +148,7 @@ export const useAnimaStore = defineStore('animaStore', () => {
     }
 
     function removePartner(animaNum: number) {
-        if(partnerAnimas.value.length === 1) return;
+        if (partnerAnimas.value.length === 1) return;
         partnerAnimas.value.splice(animaNum - 1, 1);
     }
 

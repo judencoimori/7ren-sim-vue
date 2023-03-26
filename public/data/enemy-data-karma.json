@@ -1,0 +1,191 @@
+{
+  "groupName": "業シリーズ",
+  "data": [
+    {
+      "key": "iho100",
+      "battleName": "異邦の業 100%",
+      "enemyList": [
+        {
+          "enemyName": "異邦の業",
+          "enemyStatus": [1800000, 40000, 25000, 2500, 0.3, "m"],
+          "activeAbilityList": [
+            ["adaptlance", "アダプトランス", 0.7],
+            ["fullSlush", "フルスラッシュ", 0.7],
+            ["powerSmash", "パワースマッシュ", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["untext", "アンテクスト", 0.9],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [["riseFence", "ライズフェンス", 3]]
+        },
+        {
+          "enemyName": "固塊の拝",
+          "enemyStatus": [1350000, 35000, 23000, 2600, 0.3, "m"],
+          "activeAbilityList": [
+            ["restBlow", "レストブロー", 0.7],
+            ["radImpuct", "ラッドインパクト", 0.7],
+            ["combination", "コンビネーション", 0.8]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "溶塊の拝",
+          "enemyStatus": [900000, 25000, 21000, 3000, 0.3, "m"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["bravBoost", "ブレイブ―スト", 0.8],
+            ["mailToughness", "メイルタフネス", 0.8],
+            ["combination", "コンビネーション", 0.8]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "ikyo40",
+      "battleName": "異教の業 40%",
+      "enemyList": [
+        {
+          "enemyName": "異教の業",
+          "enemyStatus": [640000, 16000, 8200, 1040, 0.3, "b"],
+          "activeAbilityList": [
+            ["soulDrain", "ソウルドレイン", 0.7],
+            ["fullBlast", "フルブラスト", 0.8],
+            ["radImpuct", "ラッドインパクト", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["untext", "アンテクスト", 0.9]
+          ],
+          "constAbilityList": [["riseFence", "ライズフェンス", 3]]
+        },
+        {
+          "enemyName": "心魂の徒1",
+          "enemyStatus": [400000, 11200, 7600, 1080, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["bravBoost", "ブレイブ―スト", 0.8],
+            ["restBlow", "レストブロー", 0.7],
+            ["adaptlance", "アダプトランス", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", "スタンドショー", 0.9]],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "心魂の徒2",
+          "enemyStatus": [400000, 11200, 7600, 1080, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["bravBoost", "ブレイブ―スト", 0.8],
+            ["restBlow", "レストブロー", 0.7],
+            ["adaptlance", "アダプトランス", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", "スタンドショー", 0.9]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "ikyo100",
+      "battleName": "異教の業 100%",
+      "enemyList": [
+        {
+          "enemyName": "異教の業",
+          "enemyStatus": [1900000, 40000, 20500, 2600, 0.3, "b"],
+          "activeAbilityList": [
+            ["soulDrain", "ソウルドレイン", 0.7],
+            ["fullBlast", "フルブラスト", 0.8],
+            ["radImpuct", "ラッドインパクト", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["untext", "アンテクスト", 0.9],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [["riseFence", "ライズフェンス", 3]]
+        },
+        {
+          "enemyName": "心魂の徒1",
+          "enemyStatus": [1000000, 28000, 19000, 2700, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["bravBoost", "ブレイブ―スト", 0.8],
+            ["restBlow", "レストブロー", 0.7],
+            ["adaptlance", "アダプトランス", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", "スタンドショー", 0.9]],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "心魂の徒2",
+          "enemyStatus": [1000000, 28000, 19000, 2700, 0.3, "b"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["bravBoost", "ブレイブ―スト", 0.8],
+            ["restBlow", "レストブロー", 0.7],
+            ["adaptlance", "アダプトランス", 0.7]
+          ],
+          "passiveAbilityList": [["standShow", "スタンドショー", 0.9]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "ibun100",
+      "battleName": "異聞の業 100%",
+      "enemyList": [
+        {
+          "enemyName": "異聞の業",
+          "enemyStatus": [2000000, 40000, 22000, 2700, 0.3, "g"],
+          "activeAbilityList": [
+            ["exeStun", "エグゼスタン", 0.6],
+            ["fullSwing", "フルスイング", 0.8],
+            ["restBlow", "レストブロー", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["setAct", "セットアクト", 1],
+            ["brightSence", "ブライトセンス", 0.9],
+            ["untext", "アンテクスト", 0.9],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [
+            ["riseFence", "ライズフェンス", 3],
+            ["frailEye", "フェレイルアイ", 1]
+          ]
+        },
+        {
+          "enemyName": "合魄の卒1",
+          "enemyStatus": [1100000, 32000, 24000, 3700, 0.3, "g"],
+          "activeAbilityList": [
+            ["punishment", "パニッシュメント", 0.9],
+            ["gridWall", "グリッドウォール", 0.8],
+            ["gravitySlow", "グラヴィティスロウ", 0.8]
+          ],
+          "passiveAbilityList": [
+            ["doubleAttack", "ダブルアタック", 0.8],
+            ["standShow", "スタンドショー", 0.9]
+          ],
+          "constAbilityList": [["rigBane", "リグベイン", 1]]
+        },
+        {
+          "enemyName": "合魄の卒2",
+          "enemyStatus": [1000000, 30000, 18000, 2500, 0.3, "g"],
+          "activeAbilityList": [
+            ["willBind", "ウィルバインド", 0.95],
+            ["restBlow", "レストブロー", 0.7]
+          ],
+          "passiveAbilityList": [],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    }
+  ]
+}

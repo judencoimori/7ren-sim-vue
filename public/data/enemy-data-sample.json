@@ -1,0 +1,137 @@
+{
+  "groupName": "サンプル",
+  "data": [
+    {
+      "key": "sample1",
+      "battleName": "サンプルA",
+      "enemyList": [
+        {
+          "enemyName": "敵A",
+          "enemyStatus": [300000, 40000, 5000, 2000, 0.3, "m"],
+          "activeAbilityList": [["fullSlush", "フルスラッシュ", 0.7]],
+          "passiveAbilityList": [],
+          "constAbilityList": [
+            ["riseFence", "ライズフェンス", 3],
+            ["through", "スウェイクスルー", 1]
+          ]
+        },
+        {
+          "enemyName": "敵B",
+          "enemyStatus": [200000, 20000, 7000, 1000, 0.3, "n"],
+          "activeAbilityList": [["fullSlush", "フルスラッシュ", 0.7]],
+          "passiveAbilityList": [],
+          "constAbilityList": [["through", "スウェイクスルー", 1]]
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "sample2",
+      "battleName": "サンプルB_HP盛り",
+      "enemyList": [
+        {
+          "enemyName": "敵A",
+          "enemyStatus": [10000000, 10, 10, 10000, 0, "m"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [["doubleAttack", "ダブルアタック", 0.8]],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "敵B_ガッツアングレ",
+          "enemyStatus": [10000, 10, 10000, 10, 0, "b"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [["ungrave", "アングレイヴ", 0.3]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "敵C",
+          "enemyStatus": [10000000, 10, 30000, 10, 0, "g"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["untext", "アンテクスト", 0.9]
+          ],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "sample3",
+      "battleName": "サンプルC_獣獣ゴゴ魔魔",
+      "enemyList": [
+        {
+          "enemyName": "獣Aガッツライコン",
+          "enemyStatus": [1000, 100, 100, 10, 0, "b"],
+          "activeAbilityList": [["lifeConvert", "ライフコンバート", 0.8]],
+          "passiveAbilityList": [],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "獣Bガッツ",
+          "enemyStatus": [1000, 100, 100, 10, 0, "b"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "ゴレAガッツライコン",
+          "enemyStatus": [900, 100, 100, 10, 0, "g"],
+          "activeAbilityList": [["lifeConvert", "ライフコンバート", 0.8]],
+          "passiveAbilityList": [],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "ゴレBガッツ",
+          "enemyStatus": [900, 100, 100, 10, 0, "g"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "魔Aガッツライコン",
+          "enemyStatus": [800, 100, 100, 10, 0, "m"],
+          "activeAbilityList": [["lifeConvert", "ライフコンバート", 0.8]],
+          "passiveAbilityList": [],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "魔Bガッツ",
+          "enemyStatus": [800, 100, 100, 10, 0, "m"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "sample4",
+      "battleName": "サンプルD_ヘイトスタンド",
+      "enemyList": [
+        {
+          "enemyName": "敵A_スタンド",
+          "enemyStatus": [100000, 100, 100, 1000, 0, "b"],
+          "activeAbilityList": [],
+          "passiveAbilityList": [["standShow", "スタンドショー", 0.9]],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "敵B_ヘイト",
+          "enemyStatus": [100000, 100, 100, 9000, 0, "b"],
+          "activeAbilityList": [["pickHate", "ピックヘイト", 0.8]],
+          "passiveAbilityList": [["brightSence", "ブライトセンス", 0.9]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "敵C_ヘイトスタンド",
+          "enemyStatus": [100000, 10, 100, 10000, 0, "b"],
+          "activeAbilityList": [["pickHate", "ピックヘイト", 0.8]],
+          "passiveAbilityList": [["standShow", "スタンドショー", 0.9]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        }
+      ],
+      "effect": false
+    }
+  ]
+}

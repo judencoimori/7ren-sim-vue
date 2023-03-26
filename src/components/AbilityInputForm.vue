@@ -69,13 +69,7 @@ watch(level, () => {
 }
 
 label {
-    display: flex;
     align-items: center;
-}
-
-label,
-button {
-    margin: 0 2px 0 0;
 }
 
 input {
@@ -84,7 +78,6 @@ input {
 
 select {
     flex: 0 0 3em;
-    width: 2.5em;
 }
 
 .removeButton {

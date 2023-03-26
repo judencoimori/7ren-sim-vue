@@ -1,0 +1,242 @@
+{
+  "groupName": "PPP",
+  "data": [
+    {
+      "key": "ppp_kamon_100",
+      "battleName": "【PPP】渦紋の出師100%",
+      "enemyList": [
+        {
+          "enemyName": "渦紋の出師",
+          "enemyStatus": [1100000, 43300, 31000, 1000, 0.3, "g"],
+          "activeAbilityList": [
+            ["fullSlush", "フルスラッシュ", 0.7],
+            ["fullDrive", "フルドライブ", 0.8],
+            ["fullBlast", "フルブラスト", 0.8],
+            ["radImpuct", "ラッドインパクト", 0.7],
+            ["restBlow", "レストブロー", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["setAct", "セットアクト", 0.6],
+            ["setStance", "セットスタンス", 0.6],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": []
+        },
+        {
+          "enemyName": "凝視する巡回輪",
+          "enemyStatus": [570000, 20000, 30000, 2000, 0.3, "g"],
+          "activeAbilityList": [
+            ["pickHate", "ピックヘイト", 0.8],
+            ["gridWall", "グリッドウォール", 0.8],
+            ["shutOver", "シャットオーバー", 0.8],
+            ["bravBoost", "ブレイブ―スト", 0.8],
+            ["mailToughness", "メイルタフネス", 0.8]
+          ],
+          "passiveAbilityList": [["ungrave", "アングレイヴ", 0.5]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "立ち籠める蒸気",
+          "enemyStatus": [530000, 35000, 23000, 1300, 0.3, "g"],
+          "activeAbilityList": [
+            ["punishment", "パニッシュメント", 0.9],
+            ["riggerFolt", "リガーフォルト", 0.9],
+            ["melUmbra", "メルアンブラ", 0.8],
+            ["radImpuct", "ラッドインパクト", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["aliveShip", "アライブシップ", 0.6]
+          ],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "ppp_kamon_95",
+      "battleName": "【PPP】渦紋の出師95%",
+      "enemyList": [
+        {
+          "enemyName": "渦紋の出師",
+          "enemyStatus": [874000, 36100, 27550, 855, 0.3, "g"],
+          "activeAbilityList": [
+            ["radImpuct", "ラッドインパクト", 0.7],
+            ["fullSlush", "フルスラッシュ", 0.7],
+            ["fullDrive", "フルドライブ", 0.8],
+            ["soulDrain", "ソウルドレイン", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [["weakEye", "ウィークアイ", 1]]
+        },
+        {
+          "enemyName": "赤針の双鋏",
+          "enemyStatus": [380000, 17100, 24225, 1900, 0.3, "g"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["pickHate", "ピックヘイト", 0.8],
+            ["punishment", "パニッシュメント", 0.8],
+            ["mailToughness", "メイルタフネス", 0.8],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["ungrave", "アングレイヴ", 0.5]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "ねじ巻くぬくみ",
+          "enemyStatus": [332500, 17290, 19000, 1330, 0.3, "g"],
+          "activeAbilityList": [
+            ["riggerFolt", "リガーフォルト", 0.9],
+            ["restBlow", "レストブロー", 0.7],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["brightSence", "ブライトセンス", 0.9]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "ppp_kamon_90",
+      "battleName": "【PPP】渦紋の出師90%",
+      "enemyList": [
+        {
+          "enemyName": "渦紋の出師",
+          "enemyStatus": [828000, 34200, 26100, 810, 0.3, "g"],
+          "activeAbilityList": [
+            ["radImpuct", "ラッドインパクト", 0.7],
+            ["fullSlush", "フルスラッシュ", 0.7],
+            ["fullDrive", "フルドライブ", 0.8],
+            ["soulDrain", "ソウルドレイン", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [["weakEye", "ウィークアイ", 1]]
+        },
+        {
+          "enemyName": "赤針の双鋏",
+          "enemyStatus": [360000, 16200, 22950, 1800, 0.3, "g"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["pickHate", "ピックヘイト", 0.8],
+            ["punishment", "パニッシュメント", 0.8],
+            ["mailToughness", "メイルタフネス", 0.8],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["ungrave", "アングレイヴ", 0.5]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "ねじ巻くぬくみ",
+          "enemyStatus": [315000, 16380, 18000, 1260, 0.3, "g"],
+          "activeAbilityList": [
+            ["riggerFolt", "リガーフォルト", 0.9],
+            ["restBlow", "レストブロー", 0.7],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["brightSence", "ブライトセンス", 0.9]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "ppp_kamon_85",
+      "battleName": "【PPP】渦紋の出師85%",
+      "enemyList": [
+        {
+          "enemyName": "渦紋の出師",
+          "enemyStatus": [782000, 32300, 24650, 765, 0.3, "g"],
+          "activeAbilityList": [
+            ["radImpuct", "ラッドインパクト", 0.7],
+            ["fullSlush", "フルスラッシュ", 0.7],
+            ["fullDrive", "フルドライブ", 0.8],
+            ["soulDrain", "ソウルドレイン", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [["weakEye", "ウィークアイ", 1]]
+        },
+        {
+          "enemyName": "赤針の双鋏",
+          "enemyStatus": [340000, 15300, 21675, 1700, 0.3, "g"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["pickHate", "ピックヘイト", 0.8],
+            ["punishment", "パニッシュメント", 0.8],
+            ["mailToughness", "メイルタフネス", 0.8],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["ungrave", "アングレイヴ", 0.5]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "ねじ巻くぬくみ",
+          "enemyStatus": [297500, 15470, 17000, 1190, 0.3, "g"],
+          "activeAbilityList": [
+            ["riggerFolt", "リガーフォルト", 0.9],
+            ["restBlow", "レストブロー", 0.7],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["brightSence", "ブライトセンス", 0.9]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    },
+    {
+      "key": "ppp_kamon_80",
+      "battleName": "【PPP】渦紋の出師80%",
+      "enemyList": [
+        {
+          "enemyName": "渦紋の出師",
+          "enemyStatus": [736000, 30400, 23200, 720, 0.3, "g"],
+          "activeAbilityList": [
+            ["radImpuct", "ラッドインパクト", 0.7],
+            ["fullSlush", "フルスラッシュ", 0.7],
+            ["fullDrive", "フルドライブ", 0.8],
+            ["soulDrain", "ソウルドレイン", 0.7]
+          ],
+          "passiveAbilityList": [
+            ["brightSence", "ブライトセンス", 0.9],
+            ["doubleAttack", "ダブルアタック", 0.8]
+          ],
+          "constAbilityList": [["weakEye", "ウィークアイ", 1]]
+        },
+        {
+          "enemyName": "赤針の双鋏",
+          "enemyStatus": [320000, 14400, 20400, 1600, 0.3, "g"],
+          "activeAbilityList": [
+            ["shutOver", "シャットオーバー", 0.8],
+            ["pickHate", "ピックヘイト", 0.8],
+            ["punishment", "パニッシュメント", 0.8],
+            ["mailToughness", "メイルタフネス", 0.8],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["ungrave", "アングレイヴ", 0.5]],
+          "constAbilityList": [["guts", "ガッツ", 1]]
+        },
+        {
+          "enemyName": "ねじ巻くぬくみ",
+          "enemyStatus": [280000, 14560, 16000, 1120, 0.3, "g"],
+          "activeAbilityList": [
+            ["riggerFolt", "リガーフォルト", 0.9],
+            ["restBlow", "レストブロー", 0.7],
+            ["melUmbra", "メルアンブラ", 0.8]
+          ],
+          "passiveAbilityList": [["brightSence", "ブライトセンス", 0.9]],
+          "constAbilityList": []
+        }
+      ],
+      "effect": false
+    }
+  ]
+}

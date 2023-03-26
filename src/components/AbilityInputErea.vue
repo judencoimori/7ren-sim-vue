@@ -26,7 +26,7 @@ const abilitys = computed(
         <div class="title">アビリティ入力エリア
             <button @click="addAbility(props.animaNum, key + 1), key++">Add ability</button>
         </div>
-        <TransitionGroup tag="div">
+        <TransitionGroup tag="div" mode="out-in">
             <AbilityInputForm v-for="(ability, index) in abilitys" :key="ability.key" :abilityNum="index"
                 :animaNum="props.animaNum">
             </AbilityInputForm>
@@ -64,9 +64,5 @@ const abilitys = computed(
 .v-leave-to {
     opacity: 0;
     transform: translateX(30px);
-}
-
-.v-leave-active {
-    position: absolute;
 }
 </style>
